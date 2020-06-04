@@ -385,7 +385,7 @@ echo ======================================================================
 			else
 				REMW=`expr $W - 5`
 			fi
-		eval rm -fv "$BACKUPDIR/weekly/$DB/week.$REMW.*" 
+		eval rm -fv "$BACKUPDIR/weekly/$DB/${DB}_week.$REMW.*" 
 		echo
 			dbdump "$DB" "$BACKUPDIR/weekly/$DB/${DB}_week.$W.$DATE.sql"
 			compression "$BACKUPDIR/weekly/$DB/${DB}_week.$W.$DATE.sql"
